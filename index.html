@@ -32,8 +32,35 @@
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
         <header class="text-center mb-10">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900">HTML Fundamentals</h1>
-            <p class="text-lg text-gray-600 mt-2">An overview based on your learning modules.</p>
+            <p class="text-lg text-gray-600 mt-2"></p>
         </header>
+
+        <!-- Section: HTML Practice Zone -->
+        <section id="practice-zone" class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">HTML Practice Zone</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4">Try out your HTML code below! Type in the editor and click "Run Code" to see your creation in the preview pane.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- HTML Input -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">Editor</h3>
+                        <textarea id="html-input" class="w-full h-96 p-3 border border-gray-300 rounded-md font-mono bg-gray-800 text-white shadow-inner" spellcheck="false"><h1>Hello, World!</h1>
+<p>This is my first HTML code.</p>
+<p>Try changing the text or adding a <b>bold</b> tag!</p>
+<button onclick="alert('It works!')" style="padding: 8px 16px; border-radius: 6px; background-color: #3b82f6; color: white; border: none; cursor: pointer;">Click Me</button>
+                        </textarea>
+                        <button id="run-btn" class="mt-4 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">
+                            Run Code
+                        </button>
+                    </div>
+                    <!-- Output -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">Preview</h3>
+                        <iframe id="html-output" class="w-full h-96 border border-gray-300 rounded-md bg-white shadow-inner"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <main class="space-y-12">
 
@@ -155,10 +182,36 @@
         </main>
 
         <footer class="text-center mt-12 py-6 border-t border-gray-300">
-            <p class="text-gray-600">Sir Ar-Jay</p>
+            <p class="Made by Sir Ar-Jay"</p>
         </footer>
 
     </div>
+
+    <!-- JavaScript for the IDE -->
+    <script>
+        // Find the elements for the IDE
+        const runBtn = document.getElementById('run-btn');
+        const htmlInput = document.getElementById('html-input');
+        const htmlOutput = document.getElementById('html-output');
+
+        // Function to execute the code
+        function runCode() {
+            // Get the code from the textarea
+            const code = htmlInput.value;
+            // Get the document of the iframe
+            const outputDoc = htmlOutput.contentWindow.document;
+            // Write the code into the iframe's document
+            outputDoc.open();
+            outputDoc.write(code);
+            outputDoc.close();
+        }
+
+        // Add a click event listener to the button
+        runBtn.addEventListener('click', runCode);
+
+        // Run the code initially when the page loads
+        window.addEventListener('load', runCode);
+    </script>
 
 </body>
 </html>
