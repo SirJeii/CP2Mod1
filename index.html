@@ -46,52 +46,30 @@
             <p class="text-lg text-gray-600 mt-2">An overview based on your learning modules.</p>
         </header>
 
-        <!-- Section: HTML Practice Zone -->
-        <section id="practice-zone" class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">HTML Practice Zone</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <p class="mb-4">Try out your HTML code below! Type in the editor and click "Run Code" to see your creation in the preview pane.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-700">Editor</h3>
-                        <textarea id="html-input" class="w-full h-96 p-3 border border-gray-300 rounded-md font-mono bg-gray-800 text-white shadow-inner" spellcheck="false"><h1>Hello, World!</h1>
-<p>This is my first HTML code.</p>
-<p>Try changing the text or adding a <b>bold</b> tag!</p>
-<button onclick="alert('It works!')" style="padding: 8px 16px; border-radius: 6px; background-color: #3b82f6; color: white; border: none; cursor: pointer;">Click Me</button>
-                        </textarea>
-                        <button id="run-btn" class="mt-4 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">
-                            Run Code
-                        </button>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-700">Preview</h3>
-                        <iframe id="html-output" class="w-full h-96 border border-gray-300 rounded-md bg-white shadow-inner"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="grid grid-cols-1 md:grid-cols-5 md:gap-8">
+            
+            <!-- Left Column: Topics -->
+            <main class="space-y-12 md:col-span-3">
 
-        <main class="space-y-12">
-
-            <!-- Section: What is HTML? -->
-            <section id="what-is-html">
-                <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">What is HTML?</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p>For example, the <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;p&gt;</code> tag is used to define a paragraph:</p>
-                    <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p&gt;</span>I'm a paragraph<span class="tag">&lt;/p&gt;</span></code></pre>
-                    <div class="example-output">
-                        <p class="output-heading">Example Output</p>
-                        <p>I'm a paragraph</p>
+                <!-- Section: What is HTML? -->
+                <section id="what-is-html">
+                    <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">What is HTML?</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p>For example, the <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;p&gt;</code> tag is used to define a paragraph:</p>
+                        <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p&gt;</span>I'm a paragraph<span class="tag">&lt;/p&gt;</span></code></pre>
+                        <div class="example-output">
+                            <p class="output-heading">Example Output</p>
+                            <p>I'm a paragraph</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Section: Basic Document Structure -->
-            <section id="document-structure">
-                <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Basic Document Structure</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-2">Every HTML document has a fundamental structure that contains the entire code.</p>
-                    <div class="code-block">
+                <!-- Section: Basic Document Structure -->
+                <section id="document-structure">
+                    <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Basic Document Structure</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-2">Every HTML document has a fundamental structure that contains the entire code.</p>
+                        <div class="code-block">
 <pre><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;html&gt;</span>
   <span class="tag">&lt;head&gt;</span>
@@ -101,102 +79,131 @@
     Visible content goes here.
   <span class="tag">&lt;/body&gt;</span>
 <span class="tag">&lt;/html&gt;</span></code></pre>
-                    </div>
-                    <div class="example-output">
-                        <p class="output-heading">Example Output</p>
-                        <div class="border rounded-md">
-                            <div class="bg-gray-200 p-2 rounded-t-md text-sm font-semibold">📄 Page Title</div>
-                            <div class="p-4">Visible content goes here.</div>
+                        </div>
+                        <div class="example-output">
+                            <p class="output-heading">Example Output</p>
+                            <div class="border rounded-md">
+                                <div class="bg-gray-200 p-2 rounded-t-md text-sm font-semibold">📄 Page Title</div>
+                                <div class="p-4">Visible content goes here.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Section: Paragraphs and Line Breaks -->
-            <section id="paragraphs">
-                <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Paragraphs & Line Breaks</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-2">The <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;p&gt;</code> element creates paragraphs, while the <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;br /&gt;</code> tag creates a line break.</p>
-                    <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p&gt;</span>This is a paragraph.<span class="tag">&lt;/p&gt;</span>
+                <!-- Section: Paragraphs and Line Breaks -->
+                <section id="paragraphs">
+                    <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Paragraphs & Line Breaks</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-2">The <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;p&gt;</code> element creates paragraphs, while the <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;br /&gt;</code> tag creates a line break.</p>
+                        <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p&gt;</span>This is a paragraph.<span class="tag">&lt;/p&gt;</span>
 <span class="tag">&lt;p&gt;</span>This line contains <span class="tag">&lt;br /&gt;</span> a line break.<span class="tag">&lt;/p&gt;</span></code></pre>
-                    <div class="example-output">
-                        <p class="output-heading">Example Output</p>
-                        <p>This is a paragraph.</p>
-                        <p>This line contains <br> a line break.</p>
+                        <div class="example-output">
+                            <p class="output-heading">Example Output</p>
+                            <p>This is a paragraph.</p>
+                            <p>This line contains <br> a line break.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Section: Headings, Lines, and Comments -->
-            <section id="headings-lines-comments">
-                <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Headings, Lines & Comments</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-2">HTML provides six levels of headings, from <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;h1&gt;</code> to <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;h6&gt;</code>, for section titles.</p>
-                     <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;h1&gt;</span>Heading 1<span class="tag">&lt;/h1&gt;</span>
+                <!-- Section: Headings, Lines, and Comments -->
+                <section id="headings-lines-comments">
+                    <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Headings, Lines & Comments</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-2">HTML provides six levels of headings, from <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;h1&gt;</code> to <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;h6&gt;</code>, for section titles.</p>
+                         <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;h1&gt;</span>Heading 1<span class="tag">&lt;/h1&gt;</span>
 <span class="tag">&lt;h2&gt;</span>Heading 2<span class="tag">&lt;/h2&gt;</span>
 <span class="tag">&lt;h3&gt;</span>Heading 3<span class="tag">&lt;/h3&gt;</span></code></pre>
-                    <div class="example-output">
-                        <p class="output-heading">Example Output</p>
-                        <h1 class="text-2xl font-bold">Heading 1</h1>
-                        <h2 class="text-xl font-bold">Heading 2</h2>
-                        <h3 class="text-lg font-bold">Heading 3</h3>
-                    </div>
-                    <hr class="my-6">
-                    <p class="mb-2">The <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;hr /&gt;</code> tag is used to create a thematic break or horizontal line.</p>
-                     <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p&gt;</span>First paragraph.<span class="tag">&lt;/p&gt;</span>
+                        <div class="example-output">
+                            <p class="output-heading">Example Output</p>
+                            <h1 class="text-2xl font-bold">Heading 1</h1>
+                            <h2 class="text-xl font-bold">Heading 2</h2>
+                            <h3 class="text-lg font-bold">Heading 3</h3>
+                        </div>
+                        <hr class="my-6">
+                        <p class="mb-2">The <code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;hr /&gt;</code> tag is used to create a thematic break or horizontal line.</p>
+                         <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p&gt;</span>First paragraph.<span class="tag">&lt;/p&gt;</span>
 <span class="tag">&lt;hr /&gt;</span>
 <span class="tag">&lt;p&gt;</span>Second paragraph.<span class="tag">&lt;/p&gt;</span></code></pre>
-                    <div class="example-output">
-                        <p class="output-heading">Example Output</p>
-                        <p>First paragraph.</p>
-                        <hr>
-                        <p>Second paragraph.</p>
+                        <div class="example-output">
+                            <p class="output-heading">Example Output</p>
+                            <p>First paragraph.</p>
+                            <hr>
+                            <p>Second paragraph.</p>
+                        </div>
+                        <hr class="my-6">
+                        <p class="mb-2">Comments are not displayed by the browser but are useful for documenting your code.</p>
+                        <pre class="code-block mt-2"><code class="language-html"><span class="comment">&lt;!-- This is a comment and will not be visible. --&gt;</span></code></pre>
+                        <div class="example-output">
+                            <p class="output-heading">Example Output</p>
+                            <p class="text-gray-500 italic">(Nothing is displayed)</p>
+                        </div>
                     </div>
-                    <hr class="my-6">
-                    <p class="mb-2">Comments are not displayed by the browser but are useful for documenting your code.</p>
-                    <pre class="code-block mt-2"><code class="language-html"><span class="comment">&lt;!-- This is a comment and will not be visible. --&gt;</span></code></pre>
-                    <div class="example-output">
-                        <p class="output-heading">Example Output</p>
-                        <p class="text-gray-500 italic">(Nothing is displayed)</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Section: Text Formatting -->
-            <section id="text-formatting">
-                <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Text Formatting</h2>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-4">HTML has several elements for defining text with a special meaning.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;b&gt;</code> → <b>Bold text</b></p>
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;strong&gt;</code> → <strong>Important text</strong></p>
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;i&gt;</code> → <i>Italic text</i></p>
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;em&gt;</code> → <em>Emphasized text</em></p>
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;sub&gt;</code> → H<sub>2</sub>O (Subscript)</p>
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;sup&gt;</code> → E=MC<sup>2</sup> (Superscript)</p>
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;ins&gt;</code> → <ins>Inserted text</ins></p>
-                        <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;del&gt;</code> → <del>Deleted text</del></p>
+                <!-- Section: Text Formatting -->
+                <section id="text-formatting">
+                    <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">Text Formatting</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-4">HTML has several elements for defining text with a special meaning.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;b&gt;</code> → <b>Bold text</b></p>
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;strong&gt;</code> → <strong>Important text</strong></p>
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;i&gt;</code> → <i>Italic text</i></p>
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;em&gt;</code> → <em>Emphasized text</em></p>
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;sub&gt;</code> → H<sub>2</sub>O (Subscript)</p>
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;sup&gt;</code> → E=MC<sup>2</sup> (Superscript)</p>
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;ins&gt;</code> → <ins>Inserted text</ins></p>
+                            <p><code class="font-mono bg-gray-200 px-2 py-1 rounded">&lt;del&gt;</code> → <del>Deleted text</del></p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            
-            <!-- Section: Attributes -->
-            <section id="attributes">
-                <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">HTML Attributes</h2>
-                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="mb-2">Attributes provide additional information about an element. The <code class="font-mono bg-gray-200 px-2 py-1 rounded">align</code> attribute, for example, specifies horizontal alignment.</p>
-                    <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p</span> <span class="attribute">align</span>=<span class="value">"center"</span><span class="tag">&gt;</span>This text is centered.<span class="tag">&lt;/p&gt;</span></code></pre>
-                    <div class="example-output">
-                        <p class="output-heading">Example Output</p>
-                        <p align="center">This text is centered.</p>
-                    </div>
-                 </div>
-            </section>
+                </section>
+                
+                <!-- Section: Attributes -->
+                <section id="attributes">
+                    <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">HTML Attributes</h2>
+                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-2">Attributes provide additional information about an element. The <code class="font-mono bg-gray-200 px-2 py-1 rounded">align</code> attribute, for example, specifies horizontal alignment.</p>
+                        <pre class="code-block mt-2"><code class="language-html"><span class="tag">&lt;p</span> <span class="attribute">align</span>=<span class="value">"center"</span><span class="tag">&gt;</span>This text is centered.<span class="tag">&lt;/p&gt;</span></code></pre>
+                        <div class="example-output">
+                            <p class="output-heading">Example Output</p>
+                            <p align="center">This text is centered.</p>
+                        </div>
+                     </div>
+                </section>
 
-        </main>
+            </main>
+
+            <!-- Right Column: Practice Zone -->
+            <aside class="md:col-span-2">
+                <div class="sticky top-8">
+                    <section id="practice-zone">
+                        <h2 class="text-2xl md:text-3xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">HTML Practice Zone</h2>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <p class="mb-4">Type in the editor and click "Run Code" to see your creation in the preview pane.</p>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-gray-700">Editor</h3>
+                                <textarea id="html-input" class="w-full h-64 p-3 border border-gray-300 rounded-md font-mono bg-gray-800 text-white shadow-inner" spellcheck="false"><h1>Hello, World!</h1>
+<p>This is my first HTML code.</p>
+<p>Try changing the text or adding a <b>bold</b> tag!</p>
+<button onclick="alert('It works!')" style="padding: 8px 16px; border-radius: 6px; background-color: #3b82f6; color: white; border: none; cursor: pointer;">Click Me</button>
+                                </textarea>
+                                <button id="run-btn" class="mt-4 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">
+                                    Run Code
+                                </button>
+                            </div>
+                            <div class="mt-6">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-700">Preview</h3>
+                                <iframe id="html-output" class="w-full h-64 border border-gray-300 rounded-md bg-white shadow-inner"></iframe>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+
+        </div>
 
         <footer class="text-center mt-12 py-6 border-t border-gray-300">
-            <p class="text-gray-600">Made by Sir Ar-Jay</p>
+            <p class="text-gray-600">Website generated based on provided PDF handouts.</p>
         </footer>
 
     </div>
